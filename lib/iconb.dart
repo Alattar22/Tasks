@@ -7,16 +7,20 @@ class CreateButton extends StatelessWidget {
   final double radius;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsetsDirectional.all(7.0),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(radius),
-          color: color,
+    return Container(
+      width: 50.0 ,
+      height: 50.0,
+      child: Padding(
+        padding: const EdgeInsetsDirectional.all(7.0),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(radius),
+            color: color,
+          ),
+          child: icon,
+
+
         ),
-        child: icon,
-
-
       ),
     );
   }

@@ -2,9 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CreateCategoryButton extends StatelessWidget {
-  const CreateCategoryButton({Key? key, required this.image, required this.text}) : super(key: key);
+  const CreateCategoryButton({Key? key, required this.image, required this.text,this.color: Colors.white,}) : super(key: key);
 final String image;
 final String text;
+final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,17 +17,19 @@ final String text;
           Padding(
             padding: const EdgeInsetsDirectional.all(16.0),
             child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey.shade300,
-                ),
-                borderRadius: BorderRadius.circular(4.0),
-              ),
               width: 80.0,
               height: 80.0,
-              child: Image(
-                color: Colors.blue,
-                image: NetworkImage(image),
+              child: Container(
+               decoration: BoxDecoration(
+                 borderRadius: BorderRadiusDirectional.circular(10.0),
+                 color: color,
+               ),
+
+                child: Image(
+                  color: Colors.deepOrangeAccent,
+                  image: NetworkImage(image),
+                  fit:BoxFit.fitWidth ,
+                ),
               ),
             ),
           ),

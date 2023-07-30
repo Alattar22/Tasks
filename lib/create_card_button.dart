@@ -47,11 +47,11 @@ final String originalPrice;
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.symmetric(vertical: 8.0),
+                const Padding(
+                  padding: EdgeInsetsDirectional.symmetric(vertical: 8.0),
                   child: Text(
                     'Cattier Italiano',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 12.0,
                       color: Colors.grey,
                     ),
@@ -60,8 +60,8 @@ final String originalPrice;
                 Row(
                   children: [
                     Text(
-                      '€'+price,
-                      style: TextStyle(
+                      '€$price',
+                      style: const TextStyle(
                         color: Colors.green,
                         fontSize: 16.0,
                       ),
@@ -70,8 +70,8 @@ final String originalPrice;
                     Padding(
                       padding: const EdgeInsetsDirectional.only(start: 4.0),
                       child: Text(
-                        '€'+originalPrice,
-                        style: TextStyle(
+                        '€$originalPrice',
+                        style: const TextStyle(
                           color: Colors.black45,
                           fontSize: 13.0,
                           decoration: TextDecoration.lineThrough,
@@ -85,7 +85,7 @@ final String originalPrice;
           ),
           Container(
             alignment: AlignmentDirectional.topEnd,
-            child: Icon(
+            child: const Icon(
               Icons.favorite_border,
               color: Colors.red,
             ),
@@ -96,13 +96,13 @@ final String originalPrice;
               //alignment: AlignmentDirectional.bottomEnd,
               width: 35.0,
               height: 35.0,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(topLeft:Radius.circular(6.0),
                       bottomRight:Radius.circular(6.0) ),
                 color: Colors.green,
               ),
 
-              child: Icon(
+              child: const Icon(
                 Icons.add,
                 color: Colors.white,
               ),

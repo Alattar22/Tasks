@@ -1,8 +1,10 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:my_app/app_bar_icon.dart';
 import 'package:my_app/calculate_button.dart';
+import 'package:my_app/graph.dart';
 import 'package:my_app/recalculate_button.dart';
-
+import 'package:fl_chart/fl_chart.dart';
 class BmiResult extends StatelessWidget {
    const BmiResult({super.key, this.result = 0});
 final double result;
@@ -36,16 +38,50 @@ final double result;
                   ),
                 ),
               ),
-             const Text(
-                'For your height, a normal weight range \n'
-                    ' would be from 48.6 to 65.3 kilograms.'
-                    '\n \n',
-               textAlign: TextAlign.start,
+        Container(
+          padding: const EdgeInsetsDirectional.symmetric(vertical: 20.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(6.0),
+            color: Colors.grey.shade800,
+          ) ,
+          child: Column(
+            children: [
+              const Text(
+                'Your current BMI',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+                  color: Colors.grey,
+                  fontSize: 20.0,
                 ),
               ),
+              Padding(
+                padding: const EdgeInsetsDirectional.only(top: 10.0),
+                child: Text(
+                  '$result',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 60.0,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+             const Padding(
+               padding: EdgeInsetsDirectional.only(top: 20.0),
+               child: Text(
+                  'For your height, a normal weight range \n'
+                      ' would be from 48.6 to 65.3 kilograms.'
+                      '\n \n',
+                 textAlign: TextAlign.start,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+             ),
               Text(
                 'your BMI is $result , indicating your weight is in \n'
                     'the Normal category for adults of your\n height.'
@@ -58,10 +94,11 @@ final double result;
                   color: Colors.white,
                 ),
               ),
-               const Padding(
-                padding: EdgeInsetsDirectional.symmetric(vertical: 20.0),
-                child: RecalculateButton(text: 'Recalculate BMI'),
-              ),
+                Container(
+                  height: 270.0,
+                  alignment: Alignment.bottomCenter,
+                    child: const RecalculateButton(text: 'Recalculate BMI')
+                ),
             ],
           ),
         ),

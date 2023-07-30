@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:my_app/bmi_result.dart';
+import 'package:my_app/screens/bmi_result.dart';
 
 class CalculateButton extends StatelessWidget {
   const CalculateButton({super.key, required this.text, this.weight = 0, this.height = 0,});

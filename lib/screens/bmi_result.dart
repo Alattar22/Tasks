@@ -1,10 +1,7 @@
-import 'package:fl_chart/fl_chart.dart';
+
 import 'package:flutter/material.dart';
-import 'package:my_app/app_bar_icon.dart';
-import 'package:my_app/calculate_button.dart';
-import 'package:my_app/graph.dart';
-import 'package:my_app/recalculate_button.dart';
-import 'package:fl_chart/fl_chart.dart';
+import 'package:my_app/functions/app_bar_icon.dart';
+import 'package:my_app/functions/recalculate_button.dart';
 class BmiResult extends StatelessWidget {
    const BmiResult({super.key, this.result = 0});
 final double result;

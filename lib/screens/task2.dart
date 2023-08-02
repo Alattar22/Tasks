@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/catagory_button.dart';
-import 'package:my_app/create_card_button.dart';
-import 'package:my_app/iconb.dart';
+import 'package:my_app/functions/iconb.dart';
+import '../functions/catagory_button.dart';
+import '../functions/create_card_button.dart';
 
 class Task2 extends StatelessWidget {
 
@@ -164,9 +164,6 @@ class Task2 extends StatelessWidget {
                 ),
                    ),
                  ),
-
-
-
           ],
 
       ),

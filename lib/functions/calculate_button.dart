@@ -1,10 +1,10 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/bmi_result.dart';
+import 'package:my_app/screens/cubit/cubit.dart';
 
 class CalculateButton extends StatelessWidget {
-  const CalculateButton({super.key, required this.text, this.weight = 0, this.height = 0,});
-final String text;
+  const CalculateButton({super.key, this.weight = 0, this.height = 0,});
 final int weight ;
 final int height;
   @override
@@ -22,9 +22,9 @@ final int height;
         borderRadius: BorderRadius.circular(10.0),
         color: Colors.green.shade500,
       ),
-      child: Text(
-        text,
-        style:const TextStyle(
+      child: const Text(
+        'Calculate',
+        style: TextStyle(
             color: Colors.white,
             fontSize: 20.0
         ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class RecalculateButton extends StatelessWidget {
-  const RecalculateButton({super.key, required this.text});
-final String text;
+  const RecalculateButton({super.key,});
   @override
   Widget build(BuildContext context) {
       return TextButton(onPressed: (){
         Navigator.pop(context);
-      }, child:
+      },
+          child:
       Container(
         alignment: Alignment.center,
         width: double.infinity,
@@ -16,9 +16,9 @@ final String text;
           borderRadius: BorderRadius.circular(10.0),
           color: Colors.green.shade500,
         ),
-        child: Text(
-          text,
-          style:const TextStyle(
+        child: const Text(
+          'Recalculate',
+          style: TextStyle(
               color: Colors.white,
               fontSize: 20.0
           ),

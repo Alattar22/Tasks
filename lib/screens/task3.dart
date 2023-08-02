@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_app/functions/enter_height.dart';
 import '../functions/age_widget.dart';
 import '../functions/app_bar_icon.dart';
 import '../functions/calculate_button.dart';
-import '../functions/enter_information_widget.dart';
+import '../functions/enter_weight.dart';
 import '../functions/gender_icon.dart';
 import 'cubit/cubit.dart';
 import 'cubit/states.dart';
 
 class BmiCalculator extends StatelessWidget {
   bool ismale = true;
-   int weight = 80;
-   int height = 170;
-  int age = 20;
-  static int data = 80;
+var cubit = CounterCubit();
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -70,11 +68,11 @@ class BmiCalculator extends StatelessWidget {
                               color: !ismale ? Colors.green.shade500 : Colors.black)),
                     ],
                   ),
-                  const SizedBox(height: 15.0,),
-                  EnterInformation(infoType: 'Weight', dataType: 'kg', infoData: weight,),
-                  EnterInformation(infoType: 'Height', dataType: 'cm', infoData: height,),
-                  EnterAge(age: age,),
-                  CalculateButton(text: 'Calculate', weight: weight,height: height,),
+                  const SizedBox(height: 15.0),
+                  EnterWeight(),
+                  EnterHeight(),
+                  EnterAge(),
+                  CalculateButton( weight: cubit.weight,height: cubit.height),
 
                 ],
               ),

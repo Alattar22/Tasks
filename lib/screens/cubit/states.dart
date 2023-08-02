@@ -19,13 +19,8 @@ class CounterFemaleSatate extends CounterStates{
 class CounterAgeMinusState extends CounterStates{}
 class CounterAgePlusState extends CounterStates{}
 
-class CounterInfoPlusState extends CounterStates{
-  final int infoData;
+class CounterWeightPlusState extends CounterStates{}
+class CounterWeightMinusState extends CounterStates{}
 
-  CounterInfoPlusState(this.infoData);
-}
-class CounterInfoMinusState extends CounterStates{
-  final int infodata;
-
-  CounterInfoMinusState(this.infodata);
-}
+class CounterHeightPlusState extends CounterStates {}
+class CounterHeightMinusState extends CounterStates{}

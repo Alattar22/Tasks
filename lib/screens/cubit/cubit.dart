@@ -9,6 +9,8 @@ CounterCubit() : super(CounterInitialState());
 
 static CounterCubit get(context) => BlocProvider.of(context);
 int age = 20;
+int weight = 80;
+int height = 180;
 bool male(ismale){
   ismale = true;
   emit(CounterMaleSatate(ismale));
@@ -20,29 +22,43 @@ bool female(ismale){
   return ismale;
 }
 
-void ageMinus()
+int ageMinus()
 {
   age--;
   emit(CounterAgeMinusState());
-
+  return age;
 }
-void agePlus()
+int agePlus()
 {
   age++;
   emit(CounterAgePlusState());
+  return age;
 }
 
-int infoPlus(infoData){
-   infoData++;
-  emit(CounterInfoPlusState(infoData));
-   print(infoData);
-  return infoData;
+int weightPlus(){
+   weight++;
+  emit(CounterWeightPlusState());
+   print(weight);
+  return weight;
 }
-int infoMinus(infoData){
-  infoData--;
-  emit(CounterInfoMinusState(infoData));
-  print(infoData);
-    return infoData;
+int weightMinus(){
+  weight--;
+  emit(CounterWeightMinusState());
+  print(weight);
+  return weight;
+}
+
+int heightPlus(){
+  height++;
+  emit(CounterHeightPlusState());
+  print(height);
+  return height;
+}
+int heightMinus(){
+  height--;
+  emit(CounterHeightMinusState());
+  print(height);
+  return height;
 }
 
 }
